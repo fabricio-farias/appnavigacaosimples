@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">AppNavegacaoSimples</string>
     <string name="tela_1">Tela 1</string>
+    <string name="nome">Nome:</string>
 </resources>

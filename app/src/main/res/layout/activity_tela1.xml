@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.estacio.appnavegacaosimples.Tela1Activity">
 
     <TextView
@@ -13,20 +13,96 @@
         android:layout_margin="20dp"
         android:text="@string/tela_1"
         android:textAlignment="center"
-        android:textSize="32sp" />
+        android:textSize="32sp"
+        android:id="@+id/textView4" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/textView4"
+        android:gravity="fill_horizontal"
+        android:orientation="horizontal">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textNome"
+                android:layout_width="82dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Nome" />
+
+            <EditText
+                android:id="@+id/editNome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textFone"
+                android:layout_width="82dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Fone" />
+
+            <EditText
+                android:id="@+id/editFone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="phone" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textEmail"
+                android:layout_width="68dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Email" />
+
+            <EditText
+                android:id="@+id/editEmail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="textEmailAddress" />
+        </TableRow>
+
+    </TableLayout>
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/buttonEnviar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="Ir Tela 2" />
+        android:layout_below="@+id/tableLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:text="Enviar" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonFechar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="Fecha" />
+        android:layout_alignStart="@+id/buttonEnviar"
+        android:layout_below="@+id/buttonEnviar"
+        android:layout_marginTop="33dp"
+        android:text="Fechar" />
 
-</LinearLayout>
+</RelativeLayout>
